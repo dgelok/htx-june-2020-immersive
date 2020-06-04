@@ -12,15 +12,27 @@ planet6 = "Mercury"
 planet7 = "Uranus"
 planet8 = "Venus"
 
+planets = ["Earth", "Jupiter", "Neptune", "Mars", "Saturn", "Mercury", "Uranus", "Venus"]
+print(planets[3])
 # 2. Print out how many elements are in the planet list
 
+print(len(planets))
 
 # 3. Create a while loop that iterates through each of the items in the planet list
 # and changes them to lowercase .
 
+i = 0
+while i < len(planets):
+    planets[i] = planets[i].lower()
+    i += 1
 
 # 4. Add Pluto to the planet list.
 
+planets.append("Pluto")
+i = 0
+while i < len(planets):
+    print(planets[i])
+    i += 1
 
 # 5. Combine the follwing 2 lists into a list called Houston.
 # Find how many cities are listed in the Houston list
@@ -31,34 +43,75 @@ HoustonCities = ["Katy", "Memorial City", "Sugar Land",
                  "The Heights", "River Oaks", "Pasadena"]
 ClearLakeCities = ["League City", "Kemah", "Seabrook", "Webster", "El Lago"]
 
+#extends
+Houston = []
+Houston.extend(HoustonCities)
+Houston.extend(ClearLakeCities)
+#appends
+i = 0
+while i < len(ClearLakeCities):
+    HoustonCities.append(ClearLakeCities[i])
+    i += 1
+# concats 
+Houston = HoustonCities + ClearLakeCities
+
+
+print(len(Houston))
+Houston += ["Atascocita", "Stafford"]
+for i in range(len(Houston)):
+    print(Houston[i])
+    i += 1
+
 # 6. Since Pluto isn't really a planet, delete it from the planet list
 
-
+del planets[8]
 # 7. Create the following lists that are a subset of the Houston list:
 # htx1 = The first 4 cities
 # htx2 = Cities 3-6
 # htx3 = The last 2 cities
 
+htx1 = Houston[:4]
+htx2 = Houston[2:6]
+htx3 = Houston[9:11] # Houston[-2:]
+
+print(htx1)
+print(htx2)
+print(htx3)
+
 # 7. Insert Denver in the Houston list after The Heights
+
+Houston.insert(4, "Denver")
 
 # 8.  Remove the last city from the Houston List
 
+Houston.pop()
+
 # 9. Get the index of Seabrook from the Houston list
+
+Houston.index("Seabrook")
 
 # 10. Sort the list of cities
 
+Houston.sort()
 # 11. Copy the Houston list to a list called USCities
 
+USCities = Houston.copy()
+
 # 12. Remove all items from the Houston list
+
+Houston.clear()
 
 # 13. Take the following list and multiply 5 times
 
 nums = [4, 5, 7, 8]
+nums *= 5
+
 
 # 14
 
 
 # 15. Reverse the String "DigitalCrafts"
+
 
 
 # 16.  Crete a range [0, 1, 2, 3, 4, 5]
