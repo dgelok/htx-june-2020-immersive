@@ -19,6 +19,8 @@ zodiac = {
 # for item in zodiac.values():
 #   print(item)
 
+zodiac["Virgo"]
+
 #1a. Retrieve information about your zodiac from the zodiac dictionary
 #print(zodiac["Leo"])
 
@@ -30,6 +32,8 @@ phonebook_dict = {
   'Elizabeth': '484-584-2923'
 }
 
+
+phonebook_dict["Kareem"] = "938-489-1234"
 # 2a. Print Elizabeth's phone number
 #print(phonebook_dict["Elizabeth"])
 # 2b. Add a entry to the dictionary: Kareem's number is 938-489-1234.
