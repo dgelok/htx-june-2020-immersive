@@ -1,18 +1,38 @@
 
 
-# 1. Create an empty class called "Student"
+# # 1. Create an empty class called "Student"
+
+# class Student:
+#     def __init__(self, name, lName):
+#         self.name = name
+#         self.lName = lName
+#         print("Initialized")
+
+#     def greeting(self):
+#         return f"Hello {self.name} {self.lName}!"
+
+# #2. Create 5 students objects (instances of the class "Student") of "Student" types
+
+# dan = Student("Dan", "Gelok")
+# micah = Student("Micah", "Peterson")
+# joe = Student("Joe", "lastName")
+# michael = Student("Michael", "Cortez")
+# rj = Student("RJ", "Eppenger")
 
 
-#2. Create 5 students objects (instances of the class "Student") of "Student" types
+# #3a. Create a "greeting" method inside of the class "Student" class that 
+# # takes as a parameter "name". The return of the  method should be
+# # "Good morning {name}" 
 
 
-#3a. Create a "greeting" method inside of the class "Student" class that 
-# takes as a parameter "name". The return of the  method should be
-# "Good morning {name}" 
+# #4. Call the greet  method on each of the students in # 5 passing in a different
+# # name argument each time.
 
-
-#4. Call the greet  method on each of the students in # 5 passing in a different
-# name argument each time.
+# print(dan.greeting())
+# print(micah.greeting())
+# print(joe.greeting())
+# print(michael.greeting())
+# print(rj.greeting())
 
 #5a. Create a constructor for the Student class. 
 #5b. Create a print statement inside of the constructor
@@ -59,18 +79,44 @@
 # Create a new class called Car with the following method :
 # CarDetails which prints "Here are details of this car"
 
+class Car:
+    def __init__(self, make, model, color):
+        self.make = make
+        self.model = model
+        self.color = color
+        
+    def carDetails(self):
+        print("Here are the details of this car:")
+        print(f"Make: {self.make} | Model: {self.model} | Color: {self.color}")
+
 # Create a new class called Hybrid that inherits from the Car class
 #  with the following method: CarType which prints "I am a hybrid car" 
 
+class Hybrid(Car):
+    def carType(self):
+        print("I am a hybrid car")
 
 # Create a new class called Electric that inherits from the Car class
 #  with the following  method: CarType which prints "I am a hybrid car" 
 
+class Electric(Car):
+    def carType(self):
+        print("I am an electric car")
+
 # Create a Hybrid instance and an Electric instance
+
+tesla = Electric("tesla", "model s", "red")
+leaf = Hybrid("ford", "leaf", "blue")
+
 # Call the method CarType on the Hybrid Instance and Electric Instance 
+
+tesla.carType()
+leaf.carType()
+
 # Call the method Car Details on each instance
 
-
+tesla.carDetails()
+leaf.carDetails()
 
 # Add the following instance variables to the Car class :
 # - make 
