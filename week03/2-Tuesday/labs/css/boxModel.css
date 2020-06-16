@@ -15,9 +15,15 @@
 }
 .box1{
     float:left;
-    width: 300px;
+    width: 280px;
     height: 400px;
     background-color: thistle;
+    /* padding-right: 10px; */
+    margin-right: 20px;
+    border: solid 5px red;
+    padding: 30px; 
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .box1a{
@@ -57,4 +63,51 @@
     width: 300px;
     height: 400px;
     background-color:teal;
+}
+
+.myBox {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    border: solid 15px tomato;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin: 15px;
+    /* border-right: outset 10px black;
+    border-bottom: inset 10px pink;
+    border-left: double 20px fuchsia; */
+}
+
+/* div{
+    background-color: cyan;
+    border: 2px solid black;
+    width: 400px;
+    height: 50px;
+} */
+
+span{
+    background-color: yellow;
+    border: 2px solid black;
+    height: 50px;
+}
+
+a{
+    background-color: orange;
+    border: 2px solid orange; 
+    height: 50px;
+}
+
+img {
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#content{
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
