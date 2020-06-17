@@ -3,6 +3,10 @@
     height: 400px;
     background-color: yellow;
     position: relative;
+<<<<<<< HEAD
+=======
+
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
 }
 
 .imgContainer{
@@ -15,7 +19,12 @@
 .cityImage{
     position: absolute;
     top: -120px;
+<<<<<<< HEAD
     left: -220px;
+=======
+    left: -90px;
+
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
 }
 
 .opacity{
@@ -23,23 +32,38 @@
     height: 400px;
     width: 100%;
     position: absolute;
+<<<<<<< HEAD
     top: 0;
     opacity: 40%;
     font-size: 50px;
     color: white;
     text-align: center;
+=======
+    top:0px;
+    opacity: 50%;
+    color: white;
+    
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
 
 }
 
 .textContainer{
     position: absolute;
+<<<<<<< HEAD
     top: 0px;
+=======
+    top:0px;
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
     width: 100%;
     color: white;
     height: 400px;
     font-size: 60px;
     text-align: center;
     line-height: 400px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
 }
 
 .puppy{
@@ -54,8 +78,15 @@
 }
 
 .official{
+<<<<<<< HEAD
     position: absolute;
     top: -300px;
     left: -500px;
+=======
+    position:absolute;
+    top: -400px;
+    left: -200px;
+    
+>>>>>>> eae1e9e0e50319894e256f33b5fdbfd42ab4454b
 
 }
