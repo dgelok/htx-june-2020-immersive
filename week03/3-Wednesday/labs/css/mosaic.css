@@ -48,6 +48,9 @@
     flex: 8;
 }
 
+.flex9 {
+    flex: 9;
+}
 .black {
     background-color: black;
 }
@@ -76,6 +79,19 @@
     background-color: purple;
 }
 
+.fia {
+    background-color: fuchsia;
+}
 .border {
     border: 3px rgb(31, 30, 30) solid;
+    /* border-left: 3px black solid;
+    border-top: 3px black solid; */
+}
+
+.nbl {
+    border-left: 0
+}
+
+.nbr {
+    border-right: 0
 }
