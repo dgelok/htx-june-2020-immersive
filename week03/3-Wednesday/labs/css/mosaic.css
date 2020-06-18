@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 .container {
     
     width: 80vw;
@@ -94,4 +95,85 @@
 
 .nbr {
     border-right: 0
+=======
+
+.container{
+
+    width: 80vw; 
+    height: 90vh;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: tan;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.flexContainerColumn{
+    
+    height:  100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+
+.flexContainerRow{
+    
+    height:  100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    
+}
+
+.flex1{
+
+    flex: 1;
+}
+.flex2{
+
+    flex: 2;
+}
+
+.flex3{
+    flex:3;
+}
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.border{
+    border: 1px black solid;
+>>>>>>> 93aef4a6ef5077b946f92be29e4bbfcd5bb3e1be
 }
