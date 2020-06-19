@@ -65,3 +65,15 @@
 		content: "\f106";
 	}
 }
+
+.multi-level-nav{
+	display: flex;
+	flex-direction: row;
+}
+
+.multi-level-nav ul {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}

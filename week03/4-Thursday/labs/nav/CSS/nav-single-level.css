@@ -1,1 +1,65 @@
 /* Styles for Single Level Menu */
+
+.single-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.xyz{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+.advanced-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.advanced-nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+a .button-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+a .icon {
+    display: block;
+    padding-right: 15px;
+}
+a span {
+    font-size: 10px;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+
+#link1 {
+    display: flex;
+    flex-direction: row;
+}
+#link2 {
+    display: flex;
+    flex-direction: row;
+}
+#link3 {
+    display: flex;
+    flex-direction: row;
+}
+#link4 {
+    display: flex;
+    flex-direction: row;
+}

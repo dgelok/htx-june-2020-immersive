@@ -45,8 +45,24 @@
 	background: hsl(0, 0%, 75%);
 }
 
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
 
+.main-area {
+	display: flex;
+	justify-content: center;
+}
 
+.post-content{
+	width: 70%;
+
+}
+.sidebar {
+	
+}
 
 
 
