@@ -81,7 +81,13 @@ var fruit = "oranges";
 // ternary operator
 
 
+<<<<<<< HEAD
 
+=======
+// Declare a variable called "a" with a value of 2 
+
+//Declare a variable called "b" with a value of 3 
+>>>>>>> eef0784a12a03c68ee661cbb962403a6877ff494
 
 // var day = "Monday"
 
@@ -112,6 +118,11 @@ var fruit = "oranges";
 //         break;
 // }
 
+<<<<<<< HEAD
+=======
+
+// Add the string "5" to x and print the result
+>>>>>>> eef0784a12a03c68ee661cbb962403a6877ff494
 
 // var count = 0;
 // while (count < 10) {
