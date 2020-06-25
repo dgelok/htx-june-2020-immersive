@@ -3,7 +3,12 @@
 // retreive element from dom
 //create an element 
 // add the attributes 
+function (myVar, myElement, myClass, myParent) {
+    var myVar = document.createAttribute(myElement);
+    myVar.class = myClass;
+    myParent.appendChild(myVar);
 
+}
 
 var body = document.querySelector('body');
 
@@ -31,7 +36,7 @@ var a1 = document.createElement('a');
 a1.setAttribute('class', 'nav-item nav-link active');
 a1.setAttribute('href', '#');
 a1.textContent = "HighOnCoding";
- 
+
 
 var a2 = document.createElement('a');
 a2.setAttribute('class', 'nav-item nav-link active small pl-5')
