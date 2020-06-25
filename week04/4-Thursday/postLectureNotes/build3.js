@@ -37,3 +37,10 @@ function buildNavBar(navBGColor, anchorList) {
 
 
 
+function buildCard (parent, picLink, title) {
+    var card = document.createElement("div");
+    card.setAttribute("class", )
+
+
+    parent.appendChild(card)
+}
