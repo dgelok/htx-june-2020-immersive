@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul>
+    <li><img src="images/ylw.gif" alt="yellow" id="yellow" onclick="alert('Yellow button clicked')"></li>
+    <li><img src="images/org.gif" alt="orange" id="orange"></li>
+    <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
+    <li><img src="images/blu.gif" alt="blue" id="blue"></li>
+    <li><img src="images/pnk.gif" alt="pink" id="pink"  ></li>
+    <li><img src="images/grn.gif" alt="green" id="green"></li>
+    <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
+    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
+    <li><img src="images/red.gif" alt="red" id="red"></li>
+  </ul>
+
+  <div id="response">
+
+  </div>
+  <script>
+    var response = document.querySelector('#response')
+    var ul = document.querySelector("ul")
+    ul.addEventListener('click', (e)=>{
+
+      // console.log(e.target.id)
+      // response.textContent = e.target.id
+
+      switch(e.target.id) {
+        case "pink":
+          alert("pink");
+          break;
+        case "red":
+          alert("red");
+          break;
+        case "blue":
+          alert("blue");
+          break;
+        case "yellow":
+          alert("yellow");
+          break;
+        case "gray":
+          alert("gray");
+          break;
+        case "pink":
+          alert("pink");
+          break;
+      }
+
+    })
+    // var image = document.querySelector('#orange');
+    // var response = document.querySelector('#response');
+
+
+    // image.onclick = () => {
+    //   response.innerHTML = "You've clicked the orange button!"
+    //   response.setAttribute('style', 'background-color: yellow;')
+    // }
+  </script>
+
+</body>
+</html>
