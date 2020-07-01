@@ -11,6 +11,15 @@ it should return an object like this:
 }
 
 */
+var sumPlusMinus = arr => {
+    let sums = {plus: 0, minus: 0};
+
+    for (let num of arr) {
+        num > 0 ? sums.plus += num : sums.minus += num;
+    }
+    
+    return sums
+}
 
 
 var nums = [10, -12, 30, -1, -8, 0, 14, -33, 20];
