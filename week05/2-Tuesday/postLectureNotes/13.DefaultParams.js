@@ -8,6 +8,7 @@ Create new function and use it as a default parameter.
 
 */
 
+<<<<<<< HEAD
 // var missingArg = () => {
 //     throw new Error('Function square requires an argument')
 // }
@@ -20,6 +21,19 @@ Create new function and use it as a default parameter.
 // // 100 
 
 // square();
+=======
+var missingArg = ()=>{
+    throw new Error('Function square requires an argument')
+}
+
+var square = (a = missingArg()) => console.log(a * a);
+
+
+square(10)
+// 100 
+
+square(9);
+>>>>>>> 95d847ef6ce4cccb7a543d24562b54b7322dc952
 //BEFORE: NaN
 //AFTER: Uncaught Error: Function square requrires an agrument
 

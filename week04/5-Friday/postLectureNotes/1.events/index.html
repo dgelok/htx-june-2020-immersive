@@ -7,7 +7,11 @@
 </head>
 <body>
   <ul>
+<<<<<<< HEAD
     <li><img src="images/ylw.gif" alt="yellow" id="yellow" onclick="alert('Yellow button clicked')"></li>
+=======
+    <li><img src="images/ylw.gif" alt="yellow" id="yellow" ></li>
+>>>>>>> 95d847ef6ce4cccb7a543d24562b54b7322dc952
     <li><img src="images/org.gif" alt="orange" id="orange"></li>
     <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
     <li><img src="images/blu.gif" alt="blue" id="blue"></li>
@@ -19,6 +23,7 @@
   </ul>
 
   <div id="response">
+<<<<<<< HEAD
 
   </div>
   <script>
@@ -59,6 +64,64 @@
     //   response.innerHTML = "You've clicked the orange button!"
     //   response.setAttribute('style', 'background-color: yellow;')
     // }
+=======
+
+  </div>
+  
+  <script>
+
+
+    var ul = document.querySelector('ul');
+
+    ul.addEventListener('click', (e)=>{
+
+
+      switch(e.target.id){
+
+        case 'pink': 
+          alert('pink');
+          break;
+        case 'orange': 
+          alert('orange');
+          break;
+        case 'yellow': 
+          alert('yellow');
+          break;
+        case 'green': 
+          alert('green');
+          break;
+        case 'gray': 
+          alert('gray');
+          break;
+        case 'red': 
+          alert('red');
+          break;
+        case 'blue': 
+          alert('blue');
+          break;
+      }
+
+      // console.log(e.target.id)
+
+      // console.log('I was clicked')
+
+    })
+
+
+    // var img = document.querySelector('#orange');
+    // var response = document.querySelector('#response');
+
+    // img.onclick = () => {
+
+
+    //   response.innerHTML = "You've clicked the orange button";
+
+    //   response.setAttribute('style', "background-color:yellow")
+      // alert('orange image clicked')
+    
+    
+
+>>>>>>> 95d847ef6ce4cccb7a543d24562b54b7322dc952
   </script>
 
 </body>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 95d847ef6ce4cccb7a543d24562b54b7322dc952
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
     <style>
         .myclass {
             background-color: yellow;
@@ -85,4 +90,34 @@
         })
     </script>
 </body>
+=======
+</head>
+
+<body>
+
+    <button>sample</button>
+    <script>
+
+        
+        function sample() {
+            
+            console.log(this) //window object
+        }
+
+        let sample2 = ()=>{
+            console.log(this); //window
+        }
+
+
+        // sample()
+
+        sample2()
+        var button = document.querySelector('button');
+
+        button.addEventListener('click', sample2);
+        
+    </script>
+</body>
+
+>>>>>>> 95d847ef6ce4cccb7a543d24562b54b7322dc952
 </html>
