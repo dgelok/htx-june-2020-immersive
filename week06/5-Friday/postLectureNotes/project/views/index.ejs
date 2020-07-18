@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    Hey I'm an EJS file! I'm the home page!
+
+    <br>
+
+    <%=name%> 
+
+
+    <% for( let index = 0; index < 2; index++ ) { %>
+        <h1 class="highlight"><%=cities[index] %> </h1>
+    <% } %>
+
+
+    <% if (name.length > 0) { %>
+        <% for( let index = 0; index < name.length; index++ ) { %>
+            <h2><%=name[index] %> </h2>
+        <% } %>
+    <% } %>
+
+</body>
+</html>
