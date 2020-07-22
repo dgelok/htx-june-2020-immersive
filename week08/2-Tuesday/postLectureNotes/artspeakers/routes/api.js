@@ -27,9 +27,25 @@ router.post('/api', (req, res) => {
     console.log(req.body)
 
     feedbackData.unshift(req.body)
-    fs.writeFile('..data/feedback.json', feedbackData, 'utf-8', (err)=>{
+    let newdata = JSON.stringify(feedbackData)
+    fs.writeFile('./data/feedback.json', newdata, 'utf-8', (err)=>{
         console.log(err)
     })
+    res.json(feedbackData)
+
+})
+
+
+router.delete('/api/:ID', (req, res)=>{
+
+
+    feedbackData.splice(req.params.ID, 1)
+    // write file again (fs.writeFile)
+    let newfile = JSON.stringify(feedbackData)
+    fs.writeFile('./data/feedback.json', newfile, 'utf-8', (err)=>{
+        console.log(err)
+    })
+    // resend json (res.json )
     res.json(feedbackData)
 
 })

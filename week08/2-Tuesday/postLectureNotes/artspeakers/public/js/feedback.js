@@ -1,3 +1,5 @@
+// const { delete } = require("../../routes/api");
+
 $(()=>{
 
 
@@ -15,6 +17,19 @@ $(()=>{
             message: $('#feedback-form-message').val()
         }, updateFeedback)
         
+    })
+
+    $('.feedback-messages').click((e)=>{
+        e.preventDefault();
+        console.log(e.target.className)
+        if (e.target.className == "glyphicon glyphicon-remove") {
+            // $.ajax --- there IS NO $.delete
+            $.ajax({
+                url: `/api/${e.target.id}`,
+                type: 'DELETE',
+                success: updateFeedback
+            })
+        }
     })
 
     function updateFeedback (data) {
