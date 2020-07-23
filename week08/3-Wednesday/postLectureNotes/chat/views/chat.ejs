@@ -8,8 +8,62 @@
 <body>
     
 
+
+
+    <form action="">
+        <input type="text" id="chat">
+        <input type="submit">
+    </form>
+
+    <ul id="messages">
+
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script>
+        const socket = io();
+
+        // find the form in the body
+        // attach an event listener
+
+        let form = document.querySelector('form')
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            // find input field
+
+            let chat = document.getElementById('chat');
+            // get contents
+            // emit to server
+            socket.emit('msgFromClient', chat.value)
+        })
+
+
+        // receiving message from client
+        socket.on('msgFromServer', (serverMsg)=>{
+            // find messages' UL tag and 
+            // insert newly broadcasted message
+            let messages = document.getElementById('messages');
+            // append all messages from server
+            let liTags = messages.innerHTML + `<li>${serverMsg}</li>`
+            messages.innerHTML = liTags
+        })
+
+
         
+        
+
+
+        // console.log(socket)
+
+        // socket.on('connect', (data)=>{
+
+        //     socket.on('chatMessage', (msgFromServer)=>{
+        //         console.log(msgFromServer);
+
+        //         socket.emit('msgFromClient', {data: "this is a message from the front end"})
+                
+        //     })
+
+        // })
     </script>
 </body>
 </html>
