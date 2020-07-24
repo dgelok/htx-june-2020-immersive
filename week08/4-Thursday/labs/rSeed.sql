@@ -81,9 +81,9 @@
 --     lastvisit > '2020-07-16';
 
 -- -- restaurants you haven't ate at in the last week and has 5 stars
--- SELECT
---     *
--- FROM
---     restaurant
--- WHERE
---     lastvisit < '2020-07-16' and stars = 5
+SELECT
+    *
+FROM
+    restaurant
+WHERE
+    lastvisit < '2020-07-16' and stars = 5
