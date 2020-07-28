@@ -9,7 +9,6 @@ const db = require('../models/database') // db instance
 
 router.get('/dishes', (req, res)=>{
     
-
     db.query(`SELECT * FROM dishes`)
     .then((results)=>{
 
