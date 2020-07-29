@@ -12,19 +12,54 @@ router.use(bodyParser.json());  //req.body(fill everything that client is sendin
 //render our index (view)
 router.get('/', (req, res) => {
 
-    res.render('index');
+    res.render('index')
+//     db.query('SELECT * FROM todos')
+//     .then(records =>{
+//         res.render('index', {
+//             todos: records
+//         });
+//     })
+//     .catch(error =>{ 
+//         res.send(error)
+//     })
+    
 })
 
 
 router.get('/api', (req, res) => {
     //return all of the current todos
 
-
+    db.query('SELECT * from todos')
+    .then(records =>{
+        res.json(records);
+    })
+    .catch(error =>{
+        res.send(error)
+    })
 })
 
 
 router.post('/api', (req, res) => {
     // insert new todo
+
+    //scrape info from req's header
+    let description = req.body.description;
+
+    db.none('INSERT INTO todos VALUES (DEFAULT, $1)', [description])
+    .then(()=>{
+        // send current todos in database
+        db.query('SELECT * FROM todos')
+        .then(records =>{
+            res.json(records)
+        })
+        .catch(error =>{
+            res.send(error)
+        })
+    })
+    .catch(error => {
+        res.send(error)
+    })
+
 })
 
 router.patch('/api', (req, res) => {
