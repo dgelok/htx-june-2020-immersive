@@ -4,13 +4,14 @@ import Parent from './Ex1/Parent';
 import List from './List.js';
 import ChildList from './ChildList.js';
 import DayWeek from './SimpleList.js';
-
+import Card from './card/Cards'
+import Comment from './comments/Comments'
 
 //{firstName: value}
 const App = () => {
   return (
     <>
-      <DayWeek />              
+      <Comment />              
       
     </>
   )
