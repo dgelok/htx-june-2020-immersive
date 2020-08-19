@@ -1,39 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
-
-  //instanace variables
-    constructor() {
-        
-        super()
-        // creating state
-
-        this.state = {
-          txt: "this is a text value",
-          count: 0
-        }
-
+  
+  constructor() {
+    super();
+    this.state = {
+      states : [],
+      searchTerms : ""
     }
+  }
 
-    handleClick = () => {
-      console.log("Button was clicked");
-      console.log(`${Date.now()}`);
-      // this.state.count = this.state.count + 1;
+  componentDidMount = async () => {
+    let url = "https://corona.lmao.ninja/v2/states";
+    let response = await fetch(url);
+    let results = await response.json();
+    
 
-      this.setState({
-        count: this.state.count + 1
-      })
-
-      console.log(this.state.count)
-    }
-
+  }
+  
   render() {
     return (
-      <> 
-          <h1>{this.state.txt}</h1>
-          <br />
-
-          <button onClick={this.handleClick}>Click Me {this.state.count}</button>
+      <>
+        nothing here
       </>
     )
   }
