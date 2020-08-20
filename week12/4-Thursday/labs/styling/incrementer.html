@@ -37,25 +37,43 @@
         let reducer = (state, action) =>{
             // this takes all the actions and changes state
 
+            
             if (state == undefined){
                 state = initialState
             }
 
-            if (action.type == 'INCREMENT') {
-                return {
-                    ...state,
-                    counter: state.counter + 1
-                }
+            switch (action.type) {
+                case "INCREMENT":
+                    return {
+                        ...state,
+                        counter: state.counter + 1
+                        };
+                    break;
+                case "DECREMENT":
+                    return {
+                        ...state,
+                        counter: state.counter + 1
+                        };
+                    break;
+                default:
+                    return state
             }
-            else if (action.type == "DECREMENT") {
-                return {
-                    ...state,
-                    counter: state.counter - 1
-                }
-            }
-            else {
-                return state
-            }
+
+        //     if (action.type == 'INCREMENT') {
+        //         return {
+        //             ...state,
+        //             counter: state.counter + 1
+        //         }
+        //     }
+        //     else if (action.type == "DECREMENT") {
+        //         return {
+        //             ...state,
+        //             counter: state.counter - 1
+        //         }
+        //     }
+        //     else {
+        //         return state
+        //     }
         }
 
         
