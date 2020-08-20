@@ -5,9 +5,8 @@ import {Div, StyledButton} from "./components/styles.js"
 const App = () => {
   return (
     <>
-      <p style={styles.myDivStyle}>This is an inline style</p>
-      <p style={styles.newStyle}>This is an inline style</p>
-      <StyledButton>Hello there</StyledButton>
+      <div>Hello world</div>
+
     </>
   )
 }
