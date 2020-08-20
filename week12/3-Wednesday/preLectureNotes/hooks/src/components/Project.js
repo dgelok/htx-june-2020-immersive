@@ -1,18 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import ProjectItem from './ProjectItem'
 
+import React from 'react';
+import ProjectItem from './ProjectItem';
 
-const Project = (props) => {
+const Project = ({projects, onDelete}) => {
   return (
     <>
-      <h3>Project </h3>
-       
-      {props.projects.map(project=>{
-          return <ProjectItem key={project.id} project={project} delete={props.delete}/>
-      })}
-     
-     
-
+        {projects.map(p => <ProjectItem key={p.id} project={p} onDelete={onDelete} />)}
     </>
   )
 }

@@ -1,56 +1,73 @@
-import React, {useState, useEffect} from 'react'
-import AddProject from './AddProject'
-import Project from './Project'
-import {v1 as uuidv1} from 'uuid'
+
+import React, {useState, useEffect} from 'react';
+import { v1 as uuidv1 } from 'uuid';
+import AddProject from './AddProject';
+import Project from './Project';
 
 const ProjectManagement = () => {
 
-    const [projects, setProjects] = useState([])
+    const [projects, setProjects] = useState([]);
 
-    let addProject = (project) =>{
-        let newProjects = [...projects, project]
-        setProjects(newProjects)
-    }
+    useEffect(() => {
+        
+        let projectArr = [
 
-    let deleteProject = (id) =>{
-        let oldProjects = [...projects];
-        let index = oldProjects.filter(p =>{
-            return p.id == id
-        });
+            {
+                id: uuidv1(),
+                title: "Javascript",
+                category: 'Front-End'
+            },
+            {
+                id: uuidv1(),
+                title: "Node",
+                category: 'Back-End'
+            },
+            {
+                id: uuidv1(),
+                title: "React",
+                category: 'Front-End'
+            }
+        ]
 
-        oldProjects.splice(index, 1);
-        setProjects(oldProjects)
-    }
-    useEffect(() =>{
-       let starterArr = [
-        {
-            id: uuidv1(),
-            title: "Javascript",
-            category: 'Front-End'
-        },
-        {
-            id: uuidv1(),
-            title: "Node",
-            category: 'Back-End'
-        },
-        {
-            id: uuidv1(),
-            title: "React",
-            category: 'Front-End'
-        }
-    ];
-    setProjects(starterArr);
-    console.log({projects})
+        setProjects(projectArr)
+
+
+        
+        
+
     }, [])
 
-    return (
-        <>
-        <h1>Project MANAGEMENT</h1>
+
+    let addProject = (project) => {
+      
+        let newArray = [...projects, project]
+        setProjects(newArray)
+
+    }
+
+    let deleteProject = (id) => {
+
+        let oldProjects = [...projects];
+
+        let index = oldProjects.findIndex(o => id === o.id)
+
+        oldProjects.splice(index, 1);
+
+        setProjects(oldProjects);
+
+      
+    }
+    
+    
+
+  return (
+    <>
+        <AddProject addProject={addProject} />
+        <Project projects={projects} onDelete={deleteProject} />
+
         
-        <AddProject addProject={addProject}/>
-        <Project projects={projects} delete={deleteProject}/>
-        </>
-    )
+    </>
+  )
 }
 
 export default ProjectManagement

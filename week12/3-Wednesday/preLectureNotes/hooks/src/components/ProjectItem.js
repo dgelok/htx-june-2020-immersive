@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react'
 
-const ProjectItem = (props) => {
+
+import React from 'react'
+
+const ProjectItem = ({project, onDelete}) => {
   return (
     <>
-      {props.project.title} {props.project.category}
-      <a href="#" onClick={()=>props.delete(props.project.id)}>X</a> <br />
+      {project.title} {project.category}  |  
+
+      <a href="#" onClick={()=> onDelete(project.id)} >X</a>  <br /> 
     </>
   )
 }
