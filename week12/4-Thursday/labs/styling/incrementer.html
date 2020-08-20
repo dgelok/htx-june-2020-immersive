@@ -7,12 +7,80 @@
 </head>
 <body>
     
+    Here's my incrementor
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
 
     <script>
 
+        let incrementor = () =>{
+            // do something to increment
+            return {
+                type: "INCREMENT",
+                amount: 1
+            }
+        }
 
+        let decrementor = () =>{
+            // do something to decrement 
+            return {
+                type: "DECREMENT",
+                amount: 1
+            }
+        }
+
+        let initialState = {
+            // set up initial state
+            counter: 0
+        }
+
+        let reducer = (state, action) =>{
+            // this takes all the actions and changes state
+
+            if (state == undefined){
+                state = initialState
+            }
+
+            if (action.type == 'INCREMENT') {
+                return {
+                    ...state,
+                    counter: state.counter + 1
+                }
+            }
+            else if (action.type == "DECREMENT") {
+                return {
+                    ...state,
+                    counter: state.counter - 1
+                }
+            }
+            else {
+                return state
+            }
+        }
+
+        
+        // create store
+        let store = Redux.createStore(reducer);
+
+        let showState = () =>{
+            console.log(store.getState())
+        }
+        //store.dispatch() commands
+        store.subscribe(showState)
+
+
+        store.dispatch(incrementor())
+        store.dispatch(incrementor())
+        store.dispatch(incrementor())
+        store.dispatch(incrementor())
+        store.dispatch(decrementor())
+        store.dispatch(incrementor())
+        store.dispatch(decrementor())
+        store.dispatch(incrementor())
+        store.dispatch(decrementor())
+        store.dispatch(incrementor())
+        store.dispatch(decrementor())
+        store.dispatch(incrementor())
 
 
 
