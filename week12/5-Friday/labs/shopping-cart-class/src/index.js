@@ -7,7 +7,7 @@ import {createStore} from 'redux';
 import { Provider } from 'react-redux';
 import {Route, Switch, BrowserRouter} from 'react-router-dom'
 import cartReducer from './reducers/cartReducer'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let store = createStore(cartReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
