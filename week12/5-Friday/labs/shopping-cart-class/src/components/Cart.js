@@ -2,7 +2,7 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 import AddProduct from './AddProduct'
 import DeleteProduct from './DeleteProduct'
-
+import {Container} from 'react-bootstrap'
 
 const Cart = () => {
 
@@ -13,15 +13,17 @@ const Cart = () => {
     
     return (
     <>
+    <Container>
       <h1>Shopping Cart</h1>
 
       <h3>Total: ${totalCost}</h3>
-      {products.map(p =>{
-          return <li>{p.productName} - ${p.price} - <DeleteProduct product={p}/></li>
+      {products.map((p, index) =>{
+          return <li key={index}>{p.productName} - ${p.price} - <DeleteProduct product={p}/></li>
       })}
       <br />
       <br />
       <AddProduct />
+    </Container>
     </>
   )
 }
