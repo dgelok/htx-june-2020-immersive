@@ -5,8 +5,10 @@ import {Provider} from 'react-redux';
 import Counter from './Counter';
 import CounterHook from './components/CounterHook'
 import reducer from './reducers/reducer'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom'
 import BaseLayout from './components/layout/BaseLayout'
+import Nav from './Nav';
+import Nav2 from './Nav2'
 
 
 let saveToLocalStorage = (state) =>{
@@ -58,6 +60,10 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/' component={Counter}/>
         <Route path='/hooks' component={CounterHook}/>
+        <Route path='/nav' component={Nav}/>
+        <Route path='/nav2' component={Nav2}/>
+        
+        
       </Switch>
       </BaseLayout>
     </BrowserRouter>
