@@ -11,13 +11,19 @@ const initialState = {
     ]
 }
 
+let convert = (x) =>{
+    return Number.parseFloat(x).toFixed(2)
+}
 const cartReducer = (state=initialState, action) => {
 
     switch (action.type) {
         case "ADD":
+            let cost = state.totalCost + parseFloat(action.product.price);
+            let newcost = convert(cost);
+            console.log(newcost)
             return {
                 ...state,
-                totalCost: state.totalCost + parseFloat(action.product.price),
+                totalCost: newcost,
                 cart: state.cart.concat(action.product)
             }
         case "DELETE":

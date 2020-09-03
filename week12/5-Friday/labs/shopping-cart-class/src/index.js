@@ -19,7 +19,6 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={App}/>
           <Route path="/cart" component={Cart}/>
-
           <Route component={App}/>
         </Switch>
       </BaseLayout>   
