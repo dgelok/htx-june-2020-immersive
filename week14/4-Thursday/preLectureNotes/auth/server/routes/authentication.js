@@ -10,6 +10,11 @@ const jwt = require('jwt-simple');  //creates token
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: false}));
 
+let passport = require('passport');
+let passportService = require('../config/passAuth');
+
+let requireSignin = passport.authenticate('local', {session: false})
+
 let token = (user) =>{
 
     let timestamp = new Date().getTime();
@@ -17,20 +22,21 @@ let token = (user) =>{
     return jwt.encode({sub: user.id,  iat:timestamp}, config.secret)
 }
 
-router.get('/', (req, res) => {
+router.get('/',  (req, res) => {
   
     res.send('hello world')
 })
 
 // when a user, logging in with credentials
-router.post('/signin', (req, res) => {
+router.post('/signin', requireSignin, (req, res) => {
   
+    //req.user
     //pass back jwt token
     // check to see if user credentials are correct
     //credentials: username, password
     //look inside db
 
-    res.send('jwt token')
+    res.json({token: token(req.user)})
 })
 
 // user is registering
