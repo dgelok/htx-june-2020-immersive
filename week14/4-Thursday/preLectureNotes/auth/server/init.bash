@@ -1,2 +1,2 @@
 sequelize model:generate --name user \
-  --attributes email:string,password:string
+  --attributes email:string,password:string --force
